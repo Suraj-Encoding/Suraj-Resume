@@ -2,14 +2,14 @@
 
 import React from "react";
 import { ToolTip } from '../../Interface/types/tooltip';
-import ReactTooltip from 'react-tooltip';
+// import ReactTooltip from 'react-tooltip';
 import './Tooltip.css';
 
 // # Tooltip Component
 const Tooltip = ({ rank, id, place, offset, text }: ToolTip) => {
 
     // # Hide tooltip on page reload
-    ReactTooltip.hide();
+    // ReactTooltip.hide();
 
     // # Tooltip Logic
     let color;
