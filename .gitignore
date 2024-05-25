@@ -1,0 +1,45 @@
+## Git Ignore Files  ##
+
+# Dependencies
+/node_modules
+
+# Client Production Build 
+/build
+
+# Sanity Production Build 
+/dist
+
+# Environment Variables
+.env
+
+# Git Folder
+.git
+
+# OS Waste File
+*.DS_Store
+
+# Testing
+/coverage
+
+# Vercel
+.vercel
+
+# VSCode 
+.vscode
+
+# Logs
+/logs
+*.log
+
+# Typescript 
+*.tsbuildinfo
+next-env.d.ts
+
+# Local Files
+*.local
+
+# Next Runtime
+/.next
+
+# Sanity Runtime
+/.sanity

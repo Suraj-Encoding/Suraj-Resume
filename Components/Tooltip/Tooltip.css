@@ -1,0 +1,79 @@
+.tooltip {
+    max-width: 200px !important;
+    background-color: #e8e8e8 !important;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 15px !important;
+    padding: 0.6rem !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    color: #434445 !important;
+    text-align: center !important;
+    line-height: 0.8 !important;
+    opacity: 1 !important;
+
+    @media screen and (min-width: 2000px) {
+        font-size: 1.75rem !important;
+        max-width: 500px !important;
+        line-height: 2 !important;
+    }
+}
+
+.success-tooltip {
+    max-width: 200px !important;
+    background-color: #d1fae5 !important;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 15px !important;
+    padding: 0.6rem !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    color: #434445 !important;
+    text-align: center !important;
+    line-height: 0.8 !important;
+    opacity: 1 !important;
+
+    @media screen and (min-width: 2000px) {
+        font-size: 1.75rem !important;
+        max-width: 500px !important;
+        line-height: 2 !important;
+    }
+}
+
+.red-tooltip {
+    max-width: 200px !important;
+    background-color: #ffe4e6 !important;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 15px !important;
+    padding: 0.6rem !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    color: #434445 !important;
+    text-align: center !important;
+    line-height: 0.8 !important;
+    opacity: 1 !important;
+
+    @media screen and (min-width: 2000px) {
+        font-size: 1.75rem !important;
+        max-width: 500px !important;
+        line-height: 2 !important;
+    }
+}
+
+.blue-tooltip {
+    max-width: 200px !important;
+    background-color: #e0e7ff !important;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 15px !important;
+    padding: 0.6rem !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    color: #434445 !important;
+    text-align: center !important;
+    line-height: 0.8 !important;
+    opacity: 1 !important;
+
+    @media screen and (min-width: 2000px) {
+        font-size: 1.75rem !important;
+        max-width: 500px !important;
+        line-height: 2 !important;
+    }
+}
