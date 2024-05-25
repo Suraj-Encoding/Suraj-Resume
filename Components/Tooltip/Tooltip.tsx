@@ -2,7 +2,7 @@
 
 import React from "react";
 import { ToolTip } from '../../Interface/types/tooltip';
-// import ReactTooltip from 'react-tooltip';
+import ReactTooltip from 'react-tooltip';
 import './Tooltip.css';
 
 // # Tooltip Component
