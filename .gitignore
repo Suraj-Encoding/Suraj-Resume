@@ -4,10 +4,7 @@
 /node_modules
 
 # Client Production Build 
-/build
-
-# Sanity Production Build 
-/dist
+/out
 
 # Environment Variables
 .env
@@ -40,6 +37,3 @@ next-env.d.ts
 
 # Next Runtime
 /.next
-
-# Sanity Runtime
-/.sanity
