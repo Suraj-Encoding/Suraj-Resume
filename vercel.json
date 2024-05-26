@@ -1,0 +1,14 @@
+{
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/next"
+        }
+    ],
+    "outputDirectory": "out",
+    "commands": {
+        "build": "next build && next export -o out",
+        "install": "npm install",
+        "dev": "next dev"
+    }
+}
