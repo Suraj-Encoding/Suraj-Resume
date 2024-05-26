@@ -1,5 +1,3 @@
-"use client"
-
 import React from 'react';
 import { ToolTip } from '@/Interface/types/tooltip';
 import Tooltip from './Tooltip';
