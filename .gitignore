@@ -3,9 +3,6 @@
 # Dependencies
 /node_modules
 
-# Client Production Build 
-/out
-
 # Environment Variables
 .env
 
