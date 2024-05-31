@@ -2,12 +2,12 @@
 const nextConfig = {
   output: "export",
   images: {
-    unoptimized: true,
+    unoptimized: true
   },
   webpack: (config) => {
     config.resolve.alias.canvas = false;
     return config;
-  },
+  }
 };
 
 module.exports = nextConfig;
