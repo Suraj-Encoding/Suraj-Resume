@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from 'next/navigation';
 import { toast } from "react-toastify";
 import { Data } from '@/Interface/constant/data';
@@ -13,7 +13,7 @@ import Image from "next/image";
 import BG from "../BG/BG";
 import "./Contact.css";
 import "../Viewer/Viewer.css";
-import Profile from "../../public/Profile.png";
+import Profile from "@/public/Profile.png";
 
 
 // # Contact Component
@@ -268,6 +268,16 @@ const Contact = () => {
   // # Tooltip Components
   const TooltipComponents = TooltipsData.map(createTooltip);
 
+  // # Tooltip Bug Logic
+  const [toolTip, setToolTip] = useState(false);
+  const delay = 500;
+  useEffect(() => {
+    setToolTip(false);
+    setTimeout(() => {
+      setToolTip(true);
+    }, delay);
+  }, []);
+
   return (
     <div className="containerContact" >
       <BG />
@@ -295,12 +305,18 @@ const Contact = () => {
           >
             <span className="button_top"> Resume </span>
           </button>
-          <Tooltip rank={1} id="resume" place="bottom" offset={{ bottom: 5 }} text='Resume Page' />
         </div>
       </div>
 
+      {/* # Resume Tooltip */}
+      {toolTip && (
+        <Tooltip rank={1} id="resume" place="bottom" offset={{ bottom: 5 }} text='Resume Page' />
+      )}
+
       {/* # Tooltips */}
-      {TooltipComponents}
+      {toolTip && (
+        <> {TooltipComponents} </>
+      )}
 
       {/* # Form */}
       <div className="formPage">

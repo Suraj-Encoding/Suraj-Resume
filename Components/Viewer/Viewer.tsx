@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useState } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { useResizeObserver } from "@wojtekmaj/react-hooks";
 import { useRouter } from 'next/navigation';
 import { pdfjs, Document, Page } from "react-pdf";
@@ -12,9 +12,9 @@ import "react-pdf/dist/esm/Page/TextLayer.css";
 import Image from "next/image";
 import FileSaver from "file-saver";
 import "./Viewer.css";
-import SittingMan from "../../public/SittingMan.svg";
-import Dog from "../../public/Dog.gif"
-import Profile from "../../public/Profile.png";
+import Profile from "@/public/Profile.png";
+import SittingMan from "@/public/SittingMan.svg";
+import Dog from "@/public/Dog.gif"
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.js",
@@ -54,6 +54,16 @@ const Resume = () => {
 
   // # Router
   const router = useRouter();
+
+  // # Tooltip Bug Logic
+  const [toolTip, setToolTip] = useState(false);
+  const delay = 500;
+  useEffect(() => {
+    setToolTip(false);
+    setTimeout(() => {
+      setToolTip(true);
+    }, delay);
+  }, []);
 
   const [visibleMan, setVisibleMan] = useState(false);
   function onDocumentLoadSuccess({
@@ -99,7 +109,10 @@ const Resume = () => {
             <span className="icon2"></span>
           </button>
 
-          <Tooltip rank={1} id="download" place="left" offset={{ left: 5 }} text="Download Resume" />
+          {/* # Download Tooltip */}
+          {toolTip && (
+            <Tooltip rank={1} id="download" place="left" offset={{ left: 5 }} text="Download Resume" />
+          )}
 
           <button
             data-tip
@@ -110,7 +123,10 @@ const Resume = () => {
             <span className="button_top"> Contact </span>
           </button>
 
-          <Tooltip rank={1} id="contact" place="bottom" offset={{ bottom: 5 }} text='Contact Form' />
+          {/* # Contact Tooltip */}
+          {toolTip && (
+            <Tooltip rank={1} id="contact" place="bottom" offset={{ bottom: 5 }} text='Contact Form' />
+          )}
 
         </div>
       </div>
