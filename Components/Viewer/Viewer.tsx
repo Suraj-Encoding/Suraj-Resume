@@ -11,7 +11,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import Image from "next/image";
 import FileSaver from "file-saver";
-// import "./Viewer.css";
+import "./Viewer.css";
 import Profile from "@/public/Profile.png";
 import SittingMan from "@/public/SittingMan.svg";
 import Dog from "@/public/Dog.gif"
@@ -89,7 +89,7 @@ const Resume = () => {
             src={Profile}
             alt="Profile"
           />
-          <span className="name" > {Data[0].name} </span>
+          <span className="name" > {Data.name} </span>
         </h1>
 
         <div className="btnContainer">
@@ -139,17 +139,18 @@ const Resume = () => {
           {visibleMan && (
             <>
               <Image
+                id="man"
                 src={SittingMan}
                 width={300}
                 height={300}
                 alt="SittingMan"
                 className="manSvg"
+                priority
               />
               <Image
                 id="reverse-gif"
                 src={Dog}
-                width={170}
-                height={170}
+                style={{ width: "170px", height: "auto" }}
                 alt="Dog"
                 className="dog reverse"
               />

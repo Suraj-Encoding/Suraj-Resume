@@ -11,8 +11,7 @@ import createTooltip from '../Tooltip/createTooltip';
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import BG from "../BG/BG";
-// import "./Contact.css";
-// import "../Viewer/Viewer.css";
+import "./Contact.css";
 import Profile from "@/public/Profile.png";
 
 
@@ -266,7 +265,9 @@ const Contact = () => {
   ];
 
   // # Tooltip Components
-  const TooltipComponents = TooltipsData.map(createTooltip);
+  const TooltipComponents = TooltipsData.map((tooltip, index) => {
+    return createTooltip(tooltip, index);
+  });
 
   // # Tooltip Bug Logic
   const [toolTip, setToolTip] = useState(false);
@@ -288,15 +289,14 @@ const Contact = () => {
           onClick={() => router.push('/')}
         >
           <Image
+            className="profile"
             src={Profile}
-            width={70}
-            height={40}
             alt="Profile"
           />
-          <span className="my-1 mr-2" > {Data[0].name} </span>
+          <span className="my-1 mr-2" > {Data.name} </span>
         </h1>
 
-        <div className="btnContainer">
+        <div>
           <button
             data-tip
             data-for="resume"
@@ -332,7 +332,6 @@ const Contact = () => {
                 id="fname"
                 type="text"
                 name="fname"
-                defaultValue={""}
                 value={formData.fname}
                 onChange={handleInputChange}
                 ref={fnameInputRef}
@@ -346,7 +345,6 @@ const Contact = () => {
                 id="lname"
                 type="text"
                 name="lname"
-                defaultValue={""}
                 value={formData.lname}
                 onChange={handleInputChange}
                 ref={lnameInputRef}
@@ -361,7 +359,6 @@ const Contact = () => {
               id="email"
               type="email"
               name="email"
-              defaultValue={""}
               value={formData.email}
               onChange={handleInputChange}
               ref={emailInputRef}
@@ -376,7 +373,6 @@ const Contact = () => {
                 id="phone"
                 type="text"
                 name="phone"
-                defaultValue={""}
                 value={formData.phone}
                 onChange={handleInputChange}
                 ref={phoneInputRef}
@@ -390,7 +386,6 @@ const Contact = () => {
                 id="date"
                 type="text"
                 name="date"
-                defaultValue={getTodayDate()}
                 value={getTodayDate()}
                 onChange={handleInputChange}
                 ref={dateInputRef}
@@ -406,7 +401,6 @@ const Contact = () => {
                 id="city"
                 type="text"
                 name="city"
-                defaultValue={""}
                 value={formData.city}
                 onChange={handleInputChange}
                 ref={cityInputRef}
@@ -420,7 +414,6 @@ const Contact = () => {
                 id="country"
                 type="text"
                 name="country"
-                defaultValue={""}
                 value={formData.country}
                 onChange={handleInputChange}
                 ref={countryInputRef}
@@ -435,7 +428,6 @@ const Contact = () => {
               id="subject"
               type="text"
               name="subject"
-              defaultValue={""}
               value={formData.subject}
               onChange={handleInputChange}
               ref={subjectInputRef}
@@ -450,7 +442,6 @@ const Contact = () => {
               cols={5}
               id="message"
               name="message"
-              defaultValue={""}
               value={formData.message}
               onChange={handleInputChange}
               ref={messageInputRef}
@@ -465,7 +456,6 @@ const Contact = () => {
               cols={5}
               id="feedback"
               name="feedback"
-              defaultValue={""}
               value={formData.feedback}
               onChange={handleInputChange}
               ref={feedbackInputRef}

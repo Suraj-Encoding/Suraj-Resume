@@ -1,8 +1,18 @@
+/* ## Contact Page CSS ## */
+
+/* # Contact Container  */
 .containerContact {
   max-height: 102vh;
   overflow: hidden;
 }
 
+/* # Body */
+body {
+  margin: 0;
+  background-color: #87CEEB;
+}
+
+/* # Form Page */
 .formPage {
   font-family: 'Montserrat', sans-serif;
   display: flex;
@@ -12,10 +22,12 @@
   margin-top: -50px;
 }
 
+/* # Orange */
 .orange {
   color: black;
 }
 
+/* # Form Container */
 .form-container {
   border: 1px solid black;
   max-width: 700px;
@@ -26,6 +38,49 @@
   border-radius: 20px;
 }
 
+/* # Head */
+.head {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  color: black !important;
+  background-color: transparent !important;
+}
+
+/* # Logo */
+.logo {
+  text-align: center;
+  color: #595bdc;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  font-size: 35px;
+  margin-left: 6px;
+  margin-top: 6px;
+
+  @media screen and (max-width: 900px) {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+}
+
+/* # Profile */
+.profile {
+  margin-top: 2px;
+  width: 75px;
+  height: 50px;
+
+  @media screen and (max-width: 900px) {
+    margin-top: 3px;
+    width: 65px;
+    height: 40px;
+  }
+}
+
+/* # Heading */
 .heading {
   display: block;
   color: black;
@@ -34,6 +89,62 @@
   margin-bottom: 20px;
 }
 
+/* # Button */
+button {
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+/* # Contact Button */
+.contactBtn {
+  font-size: 15px;
+  margin-top: 12px;
+  margin-right: 2px;
+
+  @media screen and (max-width: 900px) {
+    font-size: 10px;
+    margin-top: 12px;
+    margin-right: 0;
+  }
+}
+
+/* # Button Top */
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .button_top {
+  /* # Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+  /* # Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+.contactBtn:hover {
+  --button_color: rgb(150, 94, 255);
+}
+
+button:hover .button_top {
+  color: #e8e8e8;
+}
+
+/* # Form | Form-Container | Send-Reset Button */
 .form-container .form .input {
   color: #374151;
   width: 100%;

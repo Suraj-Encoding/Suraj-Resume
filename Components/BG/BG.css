@@ -1,3 +1,6 @@
+/* ## Cloud CSS ## */
+
+/* # Body */
 body {
 	color: #333;
 	font: 100% Arial, Sans Serif;
@@ -17,7 +20,7 @@ body {
 	z-index: -1;
 }
 
-/* KeyFrames */
+/* # Keyframes */
 
 @-webkit-keyframes animateCloud {
 	0% {
@@ -49,7 +52,7 @@ body {
 	}
 }
 
-/* Animations */
+/* # Animations */
 
 .x1 {
 	-webkit-animation: animateCloud 35s linear infinite;
@@ -101,7 +104,7 @@ body {
 	transform: scale(0.55);
 }
 
-/* Objects */
+/* # Objects */
 
 .cloud {
 	background: #fff;
