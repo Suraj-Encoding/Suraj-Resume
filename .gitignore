@@ -6,8 +6,9 @@
 # Environment Variables
 .env
 
-# Next Production Build
-/out
+# Next Production Build 
+# /out
+# This is deployed to vercel
 
 # Git Folder
 .git
