@@ -11,8 +11,8 @@ import createTooltip from '../Tooltip/createTooltip';
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import BG from "../BG/BG";
-import "./Contact.css";
-import "../Viewer/Viewer.css";
+// import "./Contact.css";
+// import "../Viewer/Viewer.css";
 import Profile from "@/public/Profile.png";
 
 
