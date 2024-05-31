@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+/* ## App Global CSS ## */
+
+/* # Tailwind CSS # */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-/* #### Scrollbar CSS #### */
+/* # Scrollbar CSS # */
 
 /* Firefox */
 * {
@@ -41,10 +42,6 @@
   align-items: center;
   gap: 10px;
   right: 0;
-}
-
-.cursive {
-  font-family: 'Cedarville Cursive', cursive !important;
 }
 
 .manSvg {
