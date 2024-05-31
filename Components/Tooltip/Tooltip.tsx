@@ -6,9 +6,6 @@ import './Tooltip.css';
 // # Tooltip Component
 const Tooltip = ({ rank, id, place, offset, text }: ToolTip) => {
 
-    // # Hide tooltip on page reload
-    // ReactTooltip.hide();
-
     // # Tooltip Logic
     let color;
     let className;
