@@ -9,6 +9,9 @@
 # Next Production Build 
 /out
 
+# Site Deployment Code
+/site
+
 # Git Folder
 .git
 
