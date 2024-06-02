@@ -7,10 +7,8 @@
 .env
 
 # Next Production Build 
-/out
-
-# Site Deployment Code
-/site
+# /out
+# Deployed on vercel 
 
 # Git Folder
 .git

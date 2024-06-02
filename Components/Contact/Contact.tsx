@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { useRouter } from 'next/navigation';
 import { toast } from "react-toastify";
 import { Data } from '@/Interface/constant/data';
 import { Toast } from '@/Interface/types/toast';
@@ -9,6 +8,7 @@ import { ToolTip } from '@/Interface/types/tooltip';
 import Tooltip from '../Tooltip/Tooltip';
 import createTooltip from '../Tooltip/createTooltip';
 import emailjs from "@emailjs/browser";
+import Link from "next/link";
 import Image from "next/image";
 import BG from "../BG/BG";
 import "./Contact.css";
@@ -131,9 +131,6 @@ const Contact = () => {
         );
     }
   };
-
-  // # Router
-  const router = useRouter();
 
   // # Reset Form
   const resetForm = () => {
@@ -283,28 +280,30 @@ const Contact = () => {
     <div className="containerContact" >
       <BG />
       <div className="head">
-        <h1
-          className="logo ml-4 mt-3 text-[35px] flex flex-row font-bold"
-          style={{ fontFamily: "Brush Script MT, cursive" }}
-          onClick={() => router.push('/')}
-        >
-          <Image
-            className="profile"
-            src={Profile}
-            alt="Profile"
-          />
-          <span className="my-1 mr-2" > {Data.name} </span>
-        </h1>
+        <Link href="/">
+          <h1
+            className="logo ml-4 mt-3 text-[35px] flex flex-row font-bold"
+            style={{ fontFamily: "Brush Script MT, cursive" }}
+          >
+            <Image
+              className="profile"
+              src={Profile}
+              alt="Profile"
+            />
+            <span className="my-1 mr-2" > {Data.name} </span>
+          </h1>
+        </Link>
 
         <div>
-          <button
-            data-tip
-            data-for="resume"
-            className="contactBtn"
-            onClick={() => router.push('/')}
-          >
-            <span className="button_top"> Resume </span>
-          </button>
+          <Link href="/">
+            <button
+              data-tip
+              data-for="resume"
+              className="contactBtn"
+            >
+              <span className="button_top"> Resume </span>
+            </button>
+          </Link>
         </div>
       </div>
 

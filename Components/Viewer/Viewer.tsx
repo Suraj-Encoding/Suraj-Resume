@@ -2,13 +2,13 @@
 
 import React, { useState, useCallback, useEffect } from "react";
 import { useResizeObserver } from "@wojtekmaj/react-hooks";
-import { useRouter } from 'next/navigation';
 import { pdfjs, Document, Page } from "react-pdf";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import { Data } from '@/Interface/constant/data';
 import Tooltip from '../Tooltip/Tooltip';
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
+import Link from "next/link";
 import Image from "next/image";
 import FileSaver from "file-saver";
 import "./Viewer.css";
@@ -52,9 +52,6 @@ const Resume = () => {
 
   useResizeObserver(containerRef, resizeObserverOptions, onResize);
 
-  // # Router
-  const router = useRouter();
-
   // # Tooltip Bug Logic
   const [toolTip, setToolTip] = useState(false);
   const delay = 500;
@@ -79,18 +76,19 @@ const Resume = () => {
   return (
     <div className="Example">
       <div className="head">
-        <h1
-          className="logo flex flex-row font-bold"
-          style={{ fontFamily: "Brush Script MT, cursive" }}
-          onClick={() => router.push('/')}
-        >
-          <Image
-            className="profile"
-            src={Profile}
-            alt="Profile"
-          />
-          <span className="name" > {Data.name} </span>
-        </h1>
+        <Link href="/">
+          <h1
+            className="logo flex flex-row font-bold"
+            style={{ fontFamily: "Brush Script MT, cursive" }}
+          >
+            <Image
+              className="profile"
+              src={Profile}
+              alt="Profile"
+            />
+            <span className="name" > {Data.name} </span>
+          </h1>
+        </Link>
 
         <div className="btnContainer">
           <button
@@ -114,14 +112,15 @@ const Resume = () => {
             <Tooltip rank={1} id="download" place="left" offset={{ left: 5 }} text="Download Resume" />
           )}
 
-          <button
-            data-tip
-            data-for="contact"
-            className="contactBtn"
-            onClick={() => router.push('/contact')}
-          >
-            <span className="button_top"> Contact </span>
-          </button>
+          <Link href="/contact">
+            <button
+              data-tip
+              data-for="contact"
+              className="contactBtn"
+            >
+              <span className="button_top"> Contact </span>
+            </button>
+          </Link>
 
           {/* # Contact Tooltip */}
           {toolTip && (
