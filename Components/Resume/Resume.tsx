@@ -11,7 +11,7 @@ import "react-pdf/dist/esm/Page/TextLayer.css";
 import Link from "next/link";
 import Image from "next/image";
 import FileSaver from "file-saver";
-import "./Viewer.css";
+import "./Resume.css";
 import Profile from "@/public/Profile.png";
 import SittingMan from "@/public/SittingMan.svg";
 import Dog from "@/public/Dog.gif"
