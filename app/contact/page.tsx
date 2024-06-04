@@ -2,6 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import { MetaData } from "@/Interface/constant/metadata";
 import Contact from "@/Components/Contact/Contact";
+import Man from '@/Components/Man/Man';
 import Footer from '@/Components/Footer/Footer';
 
 // # Contact Metadata
@@ -12,6 +13,7 @@ const page = () => {
   return (
     <div>
       <Contact />
+      <Man />
       <Footer />
     </div>
   );
