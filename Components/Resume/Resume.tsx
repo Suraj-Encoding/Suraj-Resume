@@ -82,8 +82,8 @@ const Resume = () => {
             style={{ fontFamily: "Brush Script MT, cursive" }}
           >
             <Image
-              className="profile"
               src={Profile}
+              className="profile"
               alt="Profile"
             />
             <span className="name" > {Data.name} </span>
@@ -142,16 +142,18 @@ const Resume = () => {
                 src={SittingMan}
                 width={300}
                 height={300}
-                alt="Man"
+                alt="man"
                 className="man"
                 priority
               />
               <Image
                 id="dog"
                 src={Dog}
-                style={{ width: "170px", height: "auto" }}
-                alt="Dog"
+                width={170}
+                height={170}
+                alt="dog"
                 className="dog"
+                priority
               />
             </>
           )}
