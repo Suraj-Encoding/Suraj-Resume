@@ -140,8 +140,7 @@ const Resume = () => {
               <Image
                 id="man"
                 src={SittingMan}
-                width={300}
-                height={300}
+                style={{ width: "300px", height: "auto" }}
                 alt="man"
                 className="man"
                 priority
@@ -149,8 +148,7 @@ const Resume = () => {
               <Image
                 id="dog"
                 src={Dog}
-                width={170}
-                height={170}
+                style={{ width: "170px", height: "auto" }}
                 alt="dog"
                 className="dog"
                 priority

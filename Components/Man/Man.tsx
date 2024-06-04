@@ -13,8 +13,7 @@ const Man = () => {
             <Image
                 id="Man"
                 src={SittingMan}
-                width={300}
-                height={300}
+                style={{ width: "300px", height: "auto" }}
                 alt="Man"
                 className="Man"
                 priority
@@ -22,8 +21,7 @@ const Man = () => {
             <Image
                 id="Dog"
                 src={Dog}
-                width={170}
-                height={170}
+                style={{ width: "170px", height: "auto" }}
                 alt="Dog"
                 className="Dog"
                 priority
