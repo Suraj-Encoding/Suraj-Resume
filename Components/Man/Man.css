@@ -1,0 +1,30 @@
+/* ## Man CSS ## */
+
+/* # Man */
+.man {
+    position: absolute;
+    top: 0px;
+    right: 100px;
+    visibility: collapse;
+}
+
+@media screen and (min-width: 900px) {
+    .man {
+        visibility: visible;
+    }
+}
+
+/* # Dog */
+.dog {
+    position: absolute;
+    top: 160px;
+    right: 300px;
+    visibility: collapse;
+    animation: reversed 1s linear infinite;
+}
+
+@media screen and (min-width: 900px) {
+    .dog {
+        visibility: visible;
+    }
+}
