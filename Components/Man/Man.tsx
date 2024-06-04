@@ -11,21 +11,22 @@ const Man = () => {
     return (
         <div>
             <Image
-                id="man"
+                id="Man"
                 src={SittingMan}
                 width={300}
                 height={300}
                 alt="Man"
-                className="man"
+                className="Man"
                 priority
             />
             <Image
-                id="dog"
+                id="Dog"
                 src={Dog}
                 width={170}
                 height={170}
                 alt="Dog"
-                className="dog"
+                className="Dog"
+                priority
             />
         </div>
     );

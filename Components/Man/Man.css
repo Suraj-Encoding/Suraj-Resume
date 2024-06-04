@@ -1,7 +1,7 @@
 /* ## Man CSS ## */
 
 /* # Man */
-.man {
+.Man {
     position: absolute;
     top: 0px;
     right: 100px;
@@ -9,13 +9,13 @@
 }
 
 @media screen and (min-width: 900px) {
-    .man {
+    .Man {
         visibility: visible;
     }
 }
 
 /* # Dog */
-.dog {
+.Dog {
     position: absolute;
     top: 160px;
     right: 300px;
@@ -24,7 +24,7 @@
 }
 
 @media screen and (min-width: 900px) {
-    .dog {
+    .Dog {
         visibility: visible;
     }
 }
