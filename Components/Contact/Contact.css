@@ -12,6 +12,13 @@ body {
   background-color: #87CEEB;
 }
 
+/* # Glass Frame */
+.glass {
+  background: rgba(101, 101, 101, 0.174);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
+
 /* # Form Page */
 .formPage {
   font-family: 'Montserrat', sans-serif;
