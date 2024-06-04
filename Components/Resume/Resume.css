@@ -17,6 +17,20 @@ body {
   background-color: #87CEEB;
 }
 
+/* # Man */
+.man {
+  position: absolute;
+  top: -233px;
+  left: 400px;
+  visibility: collapse;
+}
+
+@media screen and (min-width: 900px) {
+  .man {
+    visibility: visible;
+  }
+}
+
 /* # Dog */
 .dog {
   position: absolute;
@@ -132,6 +146,15 @@ button {
   border: none;
   border-radius: var(--button_radius);
   background: var(--button_outline_color);
+}
+
+/* # Resume Button */
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  right: 0;
 }
 
 /* # Contact Button */
