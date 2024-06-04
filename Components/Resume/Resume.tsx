@@ -142,16 +142,16 @@ const Resume = () => {
                 src={SittingMan}
                 width={300}
                 height={300}
-                alt="SittingMan"
-                className="manSvg"
+                alt="Man"
+                className="man"
                 priority
               />
               <Image
-                id="reverse-gif"
+                id="dog"
                 src={Dog}
                 style={{ width: "170px", height: "auto" }}
                 alt="Dog"
-                className="dog reverse"
+                className="dog"
               />
             </>
           )}
