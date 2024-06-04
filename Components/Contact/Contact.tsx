@@ -294,7 +294,7 @@ const Contact = () => {
           </h1>
         </Link>
 
-        <div>
+        <div className="btnContainer">
           <Link href="/">
             <button
               data-tip
