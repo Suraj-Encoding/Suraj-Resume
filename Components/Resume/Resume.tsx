@@ -5,6 +5,7 @@ import { useResizeObserver } from "@wojtekmaj/react-hooks";
 import { pdfjs, Document, Page } from "react-pdf";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import { Data } from '@/Interface/constant/data';
+import { useAuth, UserButton } from '@clerk/nextjs';
 import Tooltip from '../Tooltip/Tooltip';
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
@@ -52,6 +53,9 @@ const Resume = () => {
 
   useResizeObserver(containerRef, resizeObserverOptions, onResize);
 
+  // # Login User ID
+  const { userId } = useAuth();
+
   // # Tooltip Bug Logic
   const [toolTip, setToolTip] = useState(false);
   const delay = 500;
@@ -89,6 +93,13 @@ const Resume = () => {
             <span className="name" > {Data.name} </span>
           </h1>
         </Link>
+
+        {/* # User Profile On Login */}
+        {userId && (
+          <div className="user">
+            <UserButton afterSignOutUrl='/' />
+          </div>
+        )}
 
         <div className="btnContainer">
           <button
