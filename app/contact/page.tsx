@@ -1,12 +1,11 @@
 import React from "react";
-import { Metadata } from "next";
 import { MetaData } from "@/Interface/constant/metadata";
 import Contact from "@/Components/Contact/Contact";
 import Man from '@/Components/Man/Man';
 import Footer from '@/Components/Footer/Footer';
 
 // # Contact Metadata
-export const metadata: Metadata = MetaData[1];
+export const metadata = MetaData[1];
 
 // # Contact Page
 const page = () => {
