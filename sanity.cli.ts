@@ -1,13 +1,13 @@
 // # Sanity CLI #
 
 import { defineCliConfig } from 'sanity/cli';
+import { projectId, dataset } from './sanity/config/env';
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
-
-export default defineCliConfig({
+const config = defineCliConfig({
     api: {
         projectId,
         dataset
     }
 });
+
+export default config;
