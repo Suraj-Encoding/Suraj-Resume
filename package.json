@@ -13,7 +13,6 @@
     "@emailjs/browser": "^3.12.1",
     "@types/file-saver": "^2.0.7",
     "file-saver": "^2.0.5",
-    "latest": "^0.2.0",
     "next": "^14.2.4",
     "pdfjs-dist": "^3.11.174",
     "react": "^18.3.1",
