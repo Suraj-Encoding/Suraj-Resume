@@ -96,7 +96,7 @@ const Resume = () => {
 
         {/* # User Profile On Login */}
         {userId && (
-          <div className="user">
+          <div className="user cursor-pointer">
             <UserButton afterSignOutUrl='/' />
           </div>
         )}
