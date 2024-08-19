@@ -17,7 +17,7 @@
     "Developer"
   ],
   "dependencies": {
-    "@clerk/nextjs": "^5.3.1",
+    "@clerk/nextjs": "^5.1.5",
     "@emailjs/browser": "^3.12.1",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.46.1",
